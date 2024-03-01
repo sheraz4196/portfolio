@@ -1,5 +1,9 @@
 Stylings
 
+---Bases
+normal-text:  text-lg text-zinc-800
+
+
 --Border Radious:
 [Buttons, Inputs]
 rounded-lg
