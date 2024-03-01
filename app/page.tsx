@@ -1,5 +1,8 @@
-import Image from "next/image";
-
+import Button from "$/components/button";
 export default function Home() {
-  return;
+  return (
+    <div className="h-screen w-screen flex items-center justify-center bg-white">
+      <Button>Button</Button>
+    </div>
+  );
 }
