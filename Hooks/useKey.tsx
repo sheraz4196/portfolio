@@ -2,14 +2,15 @@
 import { useEffect } from "react";
 export default function useKey(key: string, callback: () => void) {
   useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.key === key) {
+    const handler = (event: KeyboardEvent) => {
+      const pressedKey = event.key.toLowerCase();
+      if (pressedKey === key.toLowerCase()) {
         callback();
       }
     };
-    window.addEventListener("keydown", handleKeyPress);
+    window.addEventListener("keydown", handler);
     return () => {
-      window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener("keydown", handler);
     };
   }, [key, callback]);
 }
