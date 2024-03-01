@@ -4,9 +4,9 @@ import { Check } from "lucide-react";
 export type CheckboxProps = {
   label: string;
   isChecked: boolean;
+  initialState?: unknown;
   handleCheckboxChange?: () => void;
 };
-
 export default function Checkbox({
   label,
   isChecked,
