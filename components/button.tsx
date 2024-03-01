@@ -17,7 +17,7 @@ export default function Button({
     <button
       type={type}
       onClick={onClick}
-      className={`px-4 bg-blue-900 py-2 border-2 border-transparent rounded-lg text-lg font-bold hover:bg-blue-700 shadow-dim active:shadow-none focus:shadow-none focus:outline-none focus:border-white transition-all ${
+      className={`px-4 bg-blue-900 py-2 focus-nl rounded-lg text-lg font-bold hover:bg-blue-700 shadow-dim active:shadow-none   transition-all ${
         className || ""
       }`}
       aria-label={`${ariaLabel || children}`}
