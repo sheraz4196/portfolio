@@ -1,0 +1,10 @@
+Stylings
+
+--Border Radious:
+[Buttons, Inputs]
+rounded-lg
+
+
+--Paddings:
+[Buttons, Inputs]
+px-4 py-2
