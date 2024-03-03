@@ -3,6 +3,7 @@ import { useEffect } from "react";
 export default function useKey(key: string, callback: () => void) {
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
+      event.preventDefault();
       const pressedKey = event.key.toLowerCase();
       if (pressedKey === key.toLowerCase()) {
         callback();

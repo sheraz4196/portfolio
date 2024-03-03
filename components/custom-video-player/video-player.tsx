@@ -41,6 +41,7 @@ export default function VideoPlayer({
       };
       videoElement.addEventListener("timeupdate", handleTimeUpdate);
       videoElement.addEventListener("loadedmetadata", handleDurationChange);
+      console.log(duration);
       return () => {
         if (videoElement) {
           videoElement.removeEventListener("timeupdate", handleTimeUpdate);
@@ -86,6 +87,41 @@ export default function VideoPlayer({
       videoRef.current.currentTime += 10;
     }
   };
+  const decreaseVolume = () => {
+    const newVolume = Math.max(0, volume - 0.1);
+    setVolume(newVolume);
+    if (videoRef.current) {
+      videoRef.current.volume = newVolume;
+    }
+    if (videoRef.current) {
+      videoRef.current.volume = newVolume;
+      if (newVolume === 0) {
+        videoRef.current.muted = true;
+        setIsMuted(true);
+      } else {
+        videoRef.current.muted = false;
+        setIsMuted(false);
+      }
+    }
+  };
+
+  const increaseVolume = () => {
+    const newVolume = Math.min(1, volume + 0.1);
+    setVolume(newVolume);
+    if (videoRef.current) {
+      videoRef.current.volume = newVolume;
+    }
+    if (videoRef.current) {
+      videoRef.current.volume = newVolume;
+      if (newVolume === 0) {
+        videoRef.current.muted = true;
+        setIsMuted(true);
+      } else {
+        videoRef.current.muted = false;
+        setIsMuted(false);
+      }
+    }
+  };
   const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newVolume = parseFloat(event.target.value);
     setVolume(newVolume);
@@ -111,8 +147,12 @@ export default function VideoPlayer({
   };
 
   useKey(" ", togglePlay);
+  useKey("m", toggleMute);
   useKey("ArrowLeft", skipBackward);
   useKey("ArrowRight", skipForward);
+  useKey("ArrowUp", increaseVolume);
+  useKey("ArrowDown", decreaseVolume);
+
   return (
     <div className={`relative overflow-x-hidden bg-white  ${height} ${width}`}>
       <div className="h-full w-full flex justify-center items-center">
