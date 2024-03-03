@@ -34,6 +34,14 @@ body {
 .focus-nl {
   @apply outline-none border-2 border-transparent focus:border-white;
 }
+.box {
+  @apply bg-white px-6 py-4 border-b;
+}
 .shadow-dim {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+.background {
+  background-image: url("/Background.jpeg");
+  object-fit: cover;
+  background-size: cover;
 }
