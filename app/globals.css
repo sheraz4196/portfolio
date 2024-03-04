@@ -32,10 +32,22 @@ body {
   }
 }
 .focus-nl {
-  @apply outline-none border-2 border-transparent focus:border-white;
+  @apply outline-none border-2 border-transparent focus:border-white focus:shadow-none;
+}
+.focus-opposite {
+  @apply outline-none border-2 border-transparent focus:border-blue-900;
+}
+.focus-accent {
+  @apply outline-none border-2 border-transparent focus:border-black;
+}
+.focus-input {
+  @apply outline-none border-2 border-transparent focus:border-blue-900 focus:ring-4;
 }
 .box {
   @apply bg-white px-6 py-4 border-b;
+}
+.bg-glassy {
+  @apply bg-white/30 border-2 border-white/30;
 }
 .shadow-dim {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);

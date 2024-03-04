@@ -3,7 +3,7 @@ import Paragraph from "$/components/Typography/paragraph";
 
 export default function Hero() {
   return (
-    <main className="grid lg:grid-cols-2 box gap-4">
+    <section className="grid lg:grid-cols-2 box gap-4">
       <div>
         <Heading size="h1" className="!font-bold !text-4xl">
           Empowering Frontend Developers to Build Exceptional Experiences
@@ -20,6 +20,6 @@ export default function Hero() {
         </Paragraph>
       </div>
       <div></div>
-    </main>
+    </section>
   );
 }

@@ -13,9 +13,9 @@ export default function Paragraph({
     <p
       className={`text-zinc-800 tracking-wide leading-7 ${
         size === "small" ? "text-base font-bold mb-2" : ""
-      } ${size === "normal" ? "text-lg font-medium mb-4" : ""}${
+      } ${size === "normal" ? "text-lg font-medium mb-4" : ""} ${
         size === "large" ? "text-2xl mb-6" : ""
-      }${className || ""}`}
+      } ${className || ""}`}
     >
       {children}
     </p>
