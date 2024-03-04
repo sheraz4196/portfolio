@@ -56,7 +56,7 @@ export default function Popup({
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
-            className="absolute inset-0 bg-black/40 backdrop-blur-lg"
+            className="absolute inset-0 bg-glassy !bg-black/30"
             aria-hidden="true"
           />
           <motion.div
