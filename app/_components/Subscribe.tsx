@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { Mail } from "lucide-react";
 import Heading from "$/components/Typography/Headings";
 import Paragraph from "$/components/Typography/paragraph";
@@ -12,11 +12,12 @@ export default function Subscribe() {
   const [submitting, setSubmitting] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleChange(e: ChangeEvent<HTMLInputElement> | undefined) {
+    if (!e) return;
     setMail(e.target.value);
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMail("");
     setSubmitting(true);
@@ -45,14 +46,14 @@ export default function Subscribe() {
           <>
             <Heading
               size="h6"
-              className="flex items-center gap-2 !text-white !mb-4"
+              className="flex items-center gap-2  !mb-4 !font-bold"
             >
               <span>
                 <Mail />
               </span>
               <span>Stay Up to date</span>
             </Heading>
-            <Paragraph className="!text-white">
+            <Paragraph>
               Get notified when I publish something new, and unsubscribe at any
               time.
             </Paragraph>
@@ -77,7 +78,7 @@ export default function Subscribe() {
           open={showThankYou}
           onClose={handleThankYouClose}
         >
-          L
+          {" "}
         </Popup>
       )}
     </>

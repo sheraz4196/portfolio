@@ -31,6 +31,7 @@ export default function Input({
         value={value}
         onChange={onChange}
         type={type}
+        required
         placeholder={placeholder}
         className={`inline-block bg-gray-100   caret-blue-900 placeholder:text-zinc-900 px-4 py-2 border rounded-lg border-zinc-400 text-zinc-800 focus-input ${
           className || ""
