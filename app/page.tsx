@@ -1,14 +1,15 @@
-"use client";
-import Popup from "$/components/popup";
-import { useState } from "react";
-import Hero from "./Hero-section";
-import Trailor from "./Trailors-section";
+import Hero from "./hero-section";
+import Trailor from "./trailors-section";
+import Header from "./_components/header";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      <Hero />
-      <Trailor />
-    </main>
+    <>
+      <Header />
+      <main className="min-h-screen bg-white flex flex-col overflow-auto">
+        <Hero />
+        <Trailor />
+      </main>
+    </>
   );
 }

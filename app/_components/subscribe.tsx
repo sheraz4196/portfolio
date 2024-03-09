@@ -1,8 +1,9 @@
+"use client";
 import { useState, ChangeEvent, FormEvent } from "react";
 import { Mail } from "lucide-react";
-import Heading from "$/components/Typography/Headings";
-import Paragraph from "$/components/Typography/paragraph";
-import Input from "$/components/Input";
+import Heading from "$/components/typography/Headings";
+import Paragraph from "$/components/typography/paragraph";
+import Input from "$/components/input";
 import Button from "$/components/button";
 import Spinner from "$/components/loading-indicator/Spinner";
 import Popup from "$/components/popup";

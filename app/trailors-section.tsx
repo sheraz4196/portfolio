@@ -1,4 +1,4 @@
-import Subscribe from "./_components/Subscribe";
+import Subscribe from "./_components/subscribe";
 
 export default function Trailor() {
   return (

@@ -1,6 +1,6 @@
 import { ReactNode, useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Heading from "./Typography/Headings";
+import Heading from "./typography/Headings";
 import Button from "./button";
 import { X } from "lucide-react";
 import useKey from "$/Hooks/useKey";
