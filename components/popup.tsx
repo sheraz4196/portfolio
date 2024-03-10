@@ -20,7 +20,7 @@ export default function Popup({
   onClose,
   open,
 }: PopupProps) {
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(open);
   useEffect(() => {
     setIsOpen(open);
