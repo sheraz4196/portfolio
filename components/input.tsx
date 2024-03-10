@@ -19,7 +19,7 @@ export default function Input({
   onChange,
 }: InputProps) {
   return (
-    <div className="flex flex-col gap-3">
+    <div className={`flex flex-col gap-3 ${!label ? className : ""}`}>
       {label && (
         <label htmlFor={label} className="text-zinc-800 text-xl font-medium">
           {label} :
@@ -34,7 +34,7 @@ export default function Input({
         required
         placeholder={placeholder}
         className={`inline-block bg-gray-100   caret-blue-900 placeholder:text-zinc-900 px-4 py-2 border rounded-lg border-zinc-400 text-zinc-800 focus-input ${
-          className || ""
+          label ? className : ""
         }`}
       />
     </div>
