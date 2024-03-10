@@ -1,8 +1,9 @@
+"use client";
 import { useState, ChangeEvent, FormEvent } from "react";
 import { Mail } from "lucide-react";
-import Heading from "$/components/Typography/Headings";
-import Paragraph from "$/components/Typography/paragraph";
-import Input from "$/components/Input";
+import Heading from "$/components/typography/Headings";
+import Paragraph from "$/components/typography/paragraph";
+import Input from "$/components/input";
 import Button from "$/components/button";
 import Spinner from "$/components/loading-indicator/Spinner";
 import Popup from "$/components/popup";
@@ -35,7 +36,7 @@ export default function Subscribe() {
   return (
     <>
       <form
-        className={`px-4 py-2 rounded-lg bg-glassy h-48 ${
+        className={`px-4 py-2 rounded-lg bg-glassy min-h-48 w-full sm:w-[26rem] lg:w-auto ${
           submitting ? "flex items-center justify-center" : ""
         }`}
         onSubmit={handleSubmit}
@@ -57,14 +58,18 @@ export default function Subscribe() {
               Get notified when I publish something new, and unsubscribe at any
               time.
             </Paragraph>
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4  items-center sm:gap-2 lg:gap-4 xl:justify-between">
               <Input
                 placeholder="Email Address"
                 type="email"
                 value={mail}
                 onChange={(event) => handleChange(event)}
+                className="self-stretch flex-1"
               />
-              <Button className="py-1" type="submit">
+              <Button
+                className="!py-1.5 w-full sm:w-auto lg:w-full xl:w-auto"
+                type="submit"
+              >
                 Join
               </Button>
             </div>

@@ -1,9 +1,9 @@
-import Heading from "$/components/Typography/Headings";
-import Paragraph from "$/components/Typography/paragraph";
+import Heading from "$/components/typography/Headings";
+import Paragraph from "$/components/typography/paragraph";
 
 export default function Hero() {
   return (
-    <section className="grid lg:grid-cols-2 box gap-4">
+    <section className="grid lg:grid-cols-2 box gap-4 !pt-8">
       <div>
         <Heading size="h1" className="!font-bold !text-4xl">
           Empowering Frontend Developers to Build Exceptional Experiences
