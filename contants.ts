@@ -1,4 +1,4 @@
-import { LinkSet } from "./types/types";
+import { LinkSet, SocialMediaLinks } from "./types/types";
 export const NavigationLinks: LinkSet[] = [
   {
     text: "Home",
