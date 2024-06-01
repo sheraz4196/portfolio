@@ -2,17 +2,7 @@
 import { NavigationLinks } from "@/contants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
-import { Button } from "@/components/ui/button";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { Menu } from "lucide-react";
 export default function Navbar() {
   const pathname = usePathname();
