@@ -1,5 +1,9 @@
-import Image from "next/image";
+import HeroSection from "@/components/homepage/hero-section";
 
 export default function Home() {
-  return <section></section>;
+  return (
+    <main className="flex-1">
+      <HeroSection />
+    </main>
+  );
 }
