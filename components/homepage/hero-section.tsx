@@ -32,7 +32,7 @@ export default function HeroSection() {
           </Button>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center mt-8 lg:mt-0">
         <div className="h-96 w-96 bg-primary-700"></div>
       </div>
     </section>
