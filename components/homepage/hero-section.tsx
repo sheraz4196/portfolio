@@ -23,11 +23,7 @@ export default function HeroSection() {
               }}
             />
           </h1>
-          <Button
-            className="text-3xl px-4 py-2 h-auto lg:text-4xl xl:text-5xl max-w-max mt-4 lg:mt-6"
-            size={"lg"}
-            asChild
-          >
+          <Button className="max-w-max mt-4 lg:mt-6" size={"lg"} asChild>
             <Link href={"/about"}>Learn More About Me</Link>
           </Button>
         </div>
