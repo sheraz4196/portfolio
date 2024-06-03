@@ -5,6 +5,14 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+
 const hireMeFormSchema = z.object({
   name: z.string().min(3, { message: 'Please Enter Your Valid Name' }),
   email: z.string().email({ message: 'Please Enter a Valid Email Address' }),
@@ -46,6 +54,13 @@ const hireMeFormSchema = z.object({
   additionalInformation: z.string().optional(),
 });
 export default function HireMeForm() {
+  const BudgetRanges = [
+    'Less than $1,000',
+    '$1,000 - $5,000',
+    '$5,000 - $10,000',
+    '$10,000 - $20,000',
+    'More than $20,000',
+  ];
   const form = useForm({
     resolver: zodResolver(hireMeFormSchema),
     defaultValues: {
@@ -129,14 +144,24 @@ export default function HireMeForm() {
             </FormItem>
           )}
         />
-        {/* Replace with select */}
         <FormField
           control={form.control}
           name="budgetRange"
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Whats Your Budget Range" {...field} />
+                <Select {...field} onValueChange={field.onChange}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select Budget Range" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {BudgetRanges.map((range, index) => (
+                      <SelectItem value={range} key={index}>
+                        {range}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </FormControl>
               <FormMessage />
             </FormItem>
