@@ -75,6 +75,9 @@
   }
 }
 .background-primary {
-  background-image: url("/public/assets/backgound-1.jpg");
+  background-image: url('/public/assets/backgound-1.jpg');
   background-size: cover;
+}
+input {
+  color-scheme: dark;
 }
