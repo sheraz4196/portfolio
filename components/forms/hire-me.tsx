@@ -22,6 +22,8 @@ import {
 } from '@/components/ui/select';
 import { Checkbox } from '../ui/checkbox';
 import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
+import { Label } from '../ui/label';
+import { Button } from '../ui/button';
 
 const hireMeFormSchema = z.object({
   name: z.string().min(3, { message: 'Please Enter Your Valid Name' }),
@@ -79,7 +81,8 @@ export default function HireMeForm() {
     'SEO Optimization',
     'Other',
   ];
-  const form = useForm({
+
+  const form = useForm<z.infer<typeof hireMeFormSchema>>({
     resolver: zodResolver(hireMeFormSchema),
     defaultValues: {
       name: '',
@@ -96,9 +99,15 @@ export default function HireMeForm() {
       additionalInformation: '',
     },
   });
+  async function onSubmit(values: z.infer<typeof hireMeFormSchema>) {
+    console.log(values);
+  }
   return (
     <Form {...form}>
-      <form className="grid grid-cols-2 gap-4 p-4 lg:gap-8 lg:p-6">
+      <form
+        className="grid grid-cols-1 items-center gap-4 p-4 md:grid-cols-2 lg:gap-8 lg:p-6"
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
         <h2 className="col-span-2 lg:text-2xl">Enter Basic Info of your project</h2>
         <FormField
           control={form.control}
@@ -190,6 +199,7 @@ export default function HireMeForm() {
             </FormItem>
           )}
         />
+        <Label htmlFor="budget">Please Select a Budget Range</Label>
         <FormField
           control={form.control}
           name="budgetRange"
@@ -197,7 +207,7 @@ export default function HireMeForm() {
             <FormItem>
               <FormControl>
                 <Select {...field} onValueChange={field.onChange}>
-                  <SelectTrigger>
+                  <SelectTrigger id="budget">
                     <SelectValue placeholder="Select Budget Range" />
                   </SelectTrigger>
                   <SelectContent>
@@ -213,27 +223,28 @@ export default function HireMeForm() {
             </FormItem>
           )}
         />
+        <Label htmlFor="deadline">Project Deadline</Label>
         <FormField
           control={form.control}
           name="projectDeadline"
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Project Deadline" {...field} type="date" />
+                <Input placeholder="Project Deadline" {...field} type="date" id="deadline" />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
+        <Label htmlFor="site-link">Enter Url of your current website if you have.</Label>
         <FormField
           control={form.control}
           name="currentWebsite"
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="URL (Optional)" {...field} />
+                <Input placeholder="URL (Optional)" {...field} id="site-link" />
               </FormControl>
-              <FormDescription>Enter Url of your current website if you have.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -241,7 +252,7 @@ export default function HireMeForm() {
         <h2 className="col-span-2 lg:text-2xl">Additional Information</h2>
         <FormField
           control={form.control}
-          name="projectDescription"
+          name="additionalInformation"
           render={({ field }) => (
             <FormItem className="col-span-2">
               <FormControl>
@@ -257,9 +268,9 @@ export default function HireMeForm() {
         <h3>Prefered Contact Method</h3>
         <FormField
           control={form.control}
-          name="currentWebsite"
+          name="preferredContactMethod"
           render={({ field }) => (
-            <FormItem className="bg-red-700">
+            <FormItem className="justify-self-end">
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
@@ -288,6 +299,9 @@ export default function HireMeForm() {
             </FormItem>
           )}
         />
+        <div className="col-span-2 flex items-center justify-center">
+          <Button type="submit">Send Application</Button>
+        </div>
       </form>
     </Form>
   );

@@ -3,9 +3,8 @@ import HeroSection from '@/components/homepage/hero-section';
 
 export default function Home() {
   return (
-    <main className="flex-1 overflow-auto">
+    <main className="flex-1">
       <HeroSection />
-      <HireMeForm />
     </main>
   );
 }
