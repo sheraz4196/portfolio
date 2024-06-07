@@ -24,6 +24,8 @@ import { Checkbox } from '../ui/checkbox';
 import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
 import { Label } from '../ui/label';
 import { Button } from '../ui/button';
+import { Loader, SendHorizonal } from 'lucide-react';
+import { sendMail } from '@/lib/send-mail';
 
 const hireMeFormSchema = z.object({
   name: z.string().min(3, { message: 'Please Enter Your Valid Name' }),
@@ -99,8 +101,14 @@ export default function HireMeForm() {
       additionalInformation: '',
     },
   });
+  const isLoading = form.formState.isSubmitting;
   async function onSubmit(values: z.infer<typeof hireMeFormSchema>) {
-    console.log(values);
+    const mailText = `Name: ${values.name}\nEmail: ${values.email}\nPhoneNumber: ${values.phoneNumber}\n${values.company && `Company: ${values.company}`}\nProject Description: ${values.projectDescription}\nBudget Range: ${values.budgetRange}\nProject Deadline: ${values.projectDeadline}\nRequired Features: ${values.requiredFeatures.map((feature) => feature)}\n${values.currentWebsite && `Website Url: ${values.currentWebsite}\n`}Prefered Contact Method: ${values.preferredContactMethod}\n\nAdditional Info: ${values.additionalInformation && `Company: ${values.additionalInformation}`}`;
+    const response = await sendMail({
+      email: values.email,
+      subject: 'Hire Me Booking Form',
+      text: mailText,
+    });
   }
   return (
     <Form {...form}>
@@ -306,7 +314,14 @@ export default function HireMeForm() {
           )}
         />
         <div className="col-span-2 flex items-center justify-center">
-          <Button type="submit">Send Application</Button>
+          <Button type="submit" className="flex gap-2 text-lg">
+            <span>Send</span>
+            {isLoading ? (
+              <Loader className="h-4 w-4 animate-spin" />
+            ) : (
+              <SendHorizonal className="h-4 w-4" />
+            )}
+          </Button>
         </div>
       </form>
     </Form>
