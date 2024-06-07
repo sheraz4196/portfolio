@@ -105,7 +105,7 @@ export default function HireMeForm() {
   return (
     <Form {...form}>
       <form
-        className="grid grid-cols-1 items-center gap-4 p-4 md:grid-cols-2 lg:gap-8 lg:p-6"
+        className="grid grid-cols-2 items-center gap-4 p-4 lg:gap-8 lg:p-6"
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <h2 className="col-span-2 lg:text-2xl">Enter Basic Info of your project</h2>
@@ -113,7 +113,7 @@ export default function HireMeForm() {
           control={form.control}
           name="name"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="col-span-2 md:col-span-1">
               <FormControl>
                 <Input placeholder="Enter Your Good Name" {...field} />
               </FormControl>
@@ -125,7 +125,7 @@ export default function HireMeForm() {
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="col-span-2 md:col-span-1">
               <FormControl>
                 <Input placeholder="Enter Your Email Address" {...field} />
               </FormControl>
@@ -137,7 +137,7 @@ export default function HireMeForm() {
           control={form.control}
           name="phoneNumber"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="col-span-2 md:col-span-1">
               <FormControl>
                 <Input placeholder="Enter Your Phone Number" {...field} />
               </FormControl>
@@ -149,7 +149,7 @@ export default function HireMeForm() {
           control={form.control}
           name="company"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="col-span-2 md:col-span-1">
               <FormControl>
                 <Input placeholder="Company or Organization (Optional)" {...field} />
               </FormControl>
@@ -179,7 +179,7 @@ export default function HireMeForm() {
           render={({ field }) => (
             <FormItem className="col-span-2">
               <FormControl>
-                <div className="flex gap-6">
+                <div className="flex flex-wrap gap-6">
                   {RequiredFeatures.map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <Checkbox
@@ -199,12 +199,14 @@ export default function HireMeForm() {
             </FormItem>
           )}
         />
-        <Label htmlFor="budget">Please Select a Budget Range</Label>
+        <Label htmlFor="budget" className="col-span-2 md:col-span-1">
+          Please Select a Budget Range
+        </Label>
         <FormField
           control={form.control}
           name="budgetRange"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="col-span-2 md:col-span-1">
               <FormControl>
                 <Select {...field} onValueChange={field.onChange}>
                   <SelectTrigger id="budget">
@@ -223,12 +225,14 @@ export default function HireMeForm() {
             </FormItem>
           )}
         />
-        <Label htmlFor="deadline">Project Deadline</Label>
+        <Label htmlFor="deadline" className="col-span-2 md:col-span-1">
+          Project Deadline
+        </Label>
         <FormField
           control={form.control}
           name="projectDeadline"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="col-span-2 md:col-span-1">
               <FormControl>
                 <Input placeholder="Project Deadline" {...field} type="date" id="deadline" />
               </FormControl>
@@ -236,12 +240,14 @@ export default function HireMeForm() {
             </FormItem>
           )}
         />
-        <Label htmlFor="site-link">Enter Url of your current website if you have.</Label>
+        <Label htmlFor="site-link" className="col-span-2 md:col-span-1">
+          Enter Url of your current website if you have.
+        </Label>
         <FormField
           control={form.control}
           name="currentWebsite"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="col-span-2 md:col-span-1">
               <FormControl>
                 <Input placeholder="URL (Optional)" {...field} id="site-link" />
               </FormControl>
@@ -265,12 +271,12 @@ export default function HireMeForm() {
             </FormItem>
           )}
         />
-        <h3>Prefered Contact Method</h3>
+        <h3 className="col-span-2 md:col-span-1">Prefered Contact Method</h3>
         <FormField
           control={form.control}
           name="preferredContactMethod"
           render={({ field }) => (
-            <FormItem className="justify-self-end">
+            <FormItem className="col-span-2  md:col-span-1 md:justify-self-end">
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
