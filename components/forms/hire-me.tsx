@@ -26,6 +26,7 @@ import { Label } from '../ui/label';
 import { Button } from '../ui/button';
 import { Loader, SendHorizonal } from 'lucide-react';
 import { sendMail } from '@/lib/send-mail';
+import { toast } from 'sonner';
 
 const hireMeFormSchema = z.object({
   name: z.string().min(3, { message: 'Please Enter Your Valid Name' }),
@@ -109,6 +110,11 @@ export default function HireMeForm() {
       subject: 'Hire Me Booking Form',
       text: mailText,
     });
+    if (response?.messageId) {
+      toast.success('Application Submitted Successfully.');
+    } else {
+      toast.error('Failed To send application.');
+    }
   }
   return (
     <Form {...form}>
