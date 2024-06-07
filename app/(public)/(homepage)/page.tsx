@@ -1,4 +1,3 @@
-import HireMeForm from '@/components/forms/hire-me';
 import HeroSection from '@/components/homepage/hero-section';
 
 export default function Home() {
