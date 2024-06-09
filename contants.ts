@@ -23,39 +23,27 @@ export const NavigationLinks: LinkSet[] = [
 ];
 export const ApproachesContent: ApproachesType[] = [
   {
-    title: 'Shared ownership',
-    description: `Whether I work 
-independently or integrate with your team, 
-everyone comes along the process.`,
+    title: 'Shared Ownership',
+    description: `Whether I work independently or integrate with your team, everyone is involved in the process, ensuring a collaborative and inclusive approach.`,
   },
   {
-    title: 'I work fast, like really fast.',
-    description: `Quick iteration 
-allows us to zoom through explorations until 
-we arrive at something that feels just right.`,
+    title: 'Rapid Execution',
+    description: `I work fast, iterating quickly to explore various options until we find the perfect solution. Speed and efficiency are key.`,
   },
   {
-    title: 'Show and tell.',
-    description: `I frequently share work in 
-progress, usually in the form of screen 
-recordings with a voice over.`,
+    title: 'Show and Tell',
+    description: `I frequently share progress updates, often in the form of screen recordings with voice-overs, to keep everyone in the loop.`,
   },
   {
-    title: 'Bias for action.',
-    description: `I prefer creating tangible 
-artifacts to visualize the team's ideas over 
-lengthy documents that often go ignored.`,
+    title: 'Bias for Action',
+    description: `I prefer creating tangible artifacts to visualize ideas rather than relying on lengthy documents that often go unread.`,
   },
   {
-    title: 'I work in systems.',
-    description: `Whether it’s a small 
-feature or an entire design system, I create 
-reusable components for the team.`,
+    title: 'Systematic Approach',
+    description: `Whether it's a small feature or an entire design system, I focus on creating reusable components that benefit the entire team.`,
   },
   {
-    title: 'Design is thinking.',
-    description: `I am not afraid to throw 
-away an idea and explore divergent 
-solutions. The more the merrier!`,
+    title: 'Design Thinking',
+    description: `I'm not afraid to discard an idea and explore divergent solutions. The more options we consider, the better the final result.`,
   },
 ];
