@@ -1,23 +1,24 @@
-import { LinkSet, SocialMediaLinks } from "./types/types";
+import { LinkSet } from './types/types';
 export const NavigationLinks: LinkSet[] = [
   {
-    text: "Home",
-    link: "/",
+    text: 'Home',
+    link: '/',
   },
   {
-    text: "About",
-    link: "/about",
+    text: 'About',
+    link: '/about',
   },
   {
-    text: "SkillSet",
-    link: "/skillset",
+    text: 'SkillSet',
+    link: '/skillset',
   },
   {
-    text: "Projects",
-    link: "/projects",
+    text: 'Projects',
+    link: '/projects',
   },
   {
-    text: "Contact Me",
-    link: "/contact",
+    text: 'Contact Me',
+    link: '/contact',
   },
 ];
+export const CApabilities: string[] = [''];
