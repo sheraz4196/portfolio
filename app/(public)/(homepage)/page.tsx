@@ -1,11 +1,11 @@
-import CapaBilitiesSection from '@/components/homepage/capabilities-section';
+import ApproachSection from '@/components/homepage/approach-section';
 import HeroSection from '@/components/homepage/hero-section';
 
 export default function Home() {
   return (
-    <main className="flex-1">
+    <main className="flex-1 overflow-y-auto">
       <HeroSection />
-      <CapaBilitiesSection />
+      <ApproachSection />
     </main>
   );
 }
