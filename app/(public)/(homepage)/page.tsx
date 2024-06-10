@@ -14,9 +14,6 @@ export default async function Home() {
   });
   return (
     <main className="flex-1 overflow-y-auto 2xl:px-40">
-      <ReactQueryHydrate>
-        <GithubActivity />
-      </ReactQueryHydrate>
       <HeroSection />
       <ApproachSection />
     </main>
