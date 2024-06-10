@@ -7,6 +7,7 @@ export default async function Home() {
   console.log(contributions.length);
   return (
     <main className="flex-1 overflow-y-auto 2xl:px-40">
+      <h1 className="text-7xl">{contributions.length}</h1>
       <pre>{JSON.stringify(contributions, null, 2)}</pre>
       <HeroSection />
       <ApproachSection />
