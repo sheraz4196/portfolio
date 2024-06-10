@@ -4,6 +4,10 @@ import './globals.css';
 import Header from '@/components/general/header/header';
 import Footer from '@/components/general/footer/footer';
 import { Toaster } from '@/components/ui/sonner';
+import { RqProvider } from '@/utils/rq/react-query-provider';
+import { getQueryClient } from '@/utils/rq/react-query-client';
+import { dehydrate } from '@tanstack/react-query';
+import { ReactQueryHydrate } from '@/utils/rq/react-query-hydrate';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,13 +21,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const queryClient = getQueryClient();
+  const dehydrateState = dehydrate(queryClient);
   return (
     <html lang="en">
       <body className={`${inter.className} flex flex-col overflow-y-auto bg-zinc-900 text-zinc-50`}>
-        <Header />
-        {children}
-        <Footer />
-        <Toaster richColors />
+        <RqProvider>
+          <ReactQueryHydrate state={dehydrateState}>
+            <Header />
+            {children}
+            <Footer />
+            <Toaster richColors />
+          </ReactQueryHydrate>
+        </RqProvider>
       </body>
     </html>
   );
