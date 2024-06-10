@@ -4,8 +4,8 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 export default function HeroSection() {
   return (
-    <section className="grid h-full p-4 lg:grid-cols-2 lg:p-6">
-      <div className="flex items-center ">
+    <section className="grid h-[90vh] p-4 lg:grid-cols-2 lg:p-6">
+      <div className="flex items-center justify-center lg:justify-start">
         <div className="flex flex-col gap-4 text-center text-3xl lg:gap-6 lg:text-left lg:text-4xl xl:text-5xl">
           <h1>
             Hi, There! <span>👋</span>
@@ -33,7 +33,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="mt-8 flex items-center justify-self-end lg:mt-0">
+      <div className="mt-8 flex items-center justify-center lg:mt-0 lg:justify-self-end">
         <div className="h-96 w-96 bg-primary-700"></div>
       </div>
     </section>
