@@ -14,8 +14,8 @@ export default function ContentWriter({
 }: ContentWriterProps) {
   return (
     <li className={cn('flex items-center gap-5 self-start', className)}>
-      <div className="self-start text-xl text-white/70">{itemNumber}</div>
-      <p>
+      <div className="self-start text-2xl font-bold text-white/70">{itemNumber}</div>
+      <p className="lg:text-xl">
         <strong className="self-start font-bold text-primary-600">{title}:</strong> {description}
       </p>
     </li>
