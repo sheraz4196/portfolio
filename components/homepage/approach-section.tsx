@@ -5,7 +5,7 @@ export default function ApproachSection() {
   return (
     <section className="flex items-center p-4 lg:p-6">
       <div className="">
-        <h3 className="text-3xl lg:mb-20">Approaches</h3>
+        <h3 className="mb-20 text-3xl">Approaches</h3>
         <ol className="grid grid-cols-3 place-items-center gap-20">
           {ApproachesContent.map((approach, index) => (
             <ContentWriter
