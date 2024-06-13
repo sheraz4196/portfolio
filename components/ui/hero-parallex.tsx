@@ -72,11 +72,13 @@ export const Header = () => {
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
       <h1 className="text-2xl font-bold dark:text-white md:text-7xl">
-        The Ultimate <br /> development studio
+        Things I&apos;ve made to <br /> put my dent in the universe.
       </h1>
       <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
-        We build beautiful products with the latest technologies and frameworks. We are a team of
-        passionate developers and designers that love to build amazing products.
+        I&apos;ve created a multitude of projects over the years, each one honing my skills and
+        pushing the boundaries of web development. Here, I showcase the work that I&apos;m most
+        proud of, highlighting my passion for innovation and dedication to crafting seamless digital
+        experiences.
       </p>
     </div>
   );
