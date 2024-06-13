@@ -1,4 +1,4 @@
-import { ApproachesType, LinkSet } from './types/types';
+import { ApproachesType, LinkSet, ProjectsType } from './types/types';
 export const NavigationLinks: LinkSet[] = [
   {
     text: 'Home',
@@ -45,5 +45,47 @@ export const ApproachesContent: ApproachesType[] = [
   {
     title: 'Design Thinking',
     description: `I'm not afraid to discard an idea and explore divergent solutions. The more options we consider, the better the final result.`,
+  },
+];
+export const Projects: ProjectsType[] = [
+  {
+    title: 'Listing Partners',
+    link: 'https://www.listingpartners.com.au/',
+    thumbnail: '/assets/projects/listing-partners.png',
+  },
+  {
+    title: 'Tech And Sec',
+    link: 'https://www.techandsec.com/',
+    thumbnail: '/assets/projects/techandsec.png',
+  },
+  {
+    title: 'Infinity Devs',
+    link: 'https://infinitydevs.io/',
+    thumbnail: '/assets/projects/infinitydevs.png',
+  },
+  {
+    title: 'Crypto Receipt Generator',
+    link: 'https://crypto-invoice-generator-git-main-isaadgulzar.vercel.app/',
+    thumbnail: '/assets/projects/crypto-page.png',
+  },
+  {
+    title: 'Fleet Solutions',
+    link: 'https://fleetsolutions.vercel.app/',
+    thumbnail: '/assets/projects/fleetsolutions.png',
+  },
+  {
+    title: 'Web Devs',
+    link: 'https://sheraz4196.github.io/WEB-DEVS-DEMO-PROJECT/',
+    thumbnail: '/assets/projects/web-devs.png',
+  },
+  {
+    title: 'Natours',
+    link: 'https://sheraz4196.github.io/Natours-Test-Project/',
+    thumbnail: '/assets/projects/natours.png',
+  },
+  {
+    title: 'Omnifood',
+    link: 'https://sheraz4196.github.io/Omnifood/',
+    thumbnail: '/assets/projects/omnifood.png',
   },
 ];
