@@ -9,8 +9,8 @@ export const NavigationLinks: LinkSet[] = [
     link: '/about',
   },
   {
-    text: 'SkillSet',
-    link: '/skillset',
+    text: 'Toolkit',
+    link: '/toolkit',
   },
   {
     text: 'Projects',
