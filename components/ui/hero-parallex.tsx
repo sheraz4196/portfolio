@@ -3,6 +3,7 @@ import React from 'react';
 import { motion, useScroll, useTransform, useSpring, MotionValue } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from './button';
 
 export const HeroParallax = ({
   products,
@@ -80,6 +81,14 @@ export const Header = () => {
         proud of, highlighting my passion for innovation and dedication to crafting seamless digital
         experiences.
       </p>
+      <div className="flex items-center gap-4">
+        <Button className="mt-4 max-w-max lg:mt-6" asChild>
+          <Link href={'/hire-me'}>Hire Me</Link>
+        </Button>
+        <Button className="mt-4 max-w-max lg:mt-6" variant={'outline'} asChild>
+          <Link href={'/about'}>Learn More About Me</Link>
+        </Button>
+      </div>
     </div>
   );
 };
