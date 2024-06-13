@@ -66,7 +66,7 @@ export const Projects: ProjectsType[] = [
   {
     title: 'Crypto Receipt Generator',
     link: 'https://crypto-invoice-generator-git-main-isaadgulzar.vercel.app/',
-    thumbnail: '/assets/projects/crypto-page.png',
+    thumbnail: '/assets/projects/crpyto-page.png',
   },
   {
     title: 'Fleet Solutions',
