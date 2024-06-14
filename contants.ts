@@ -92,31 +92,36 @@ export const Projects: ProjectsType[] = [
 export const Tools: ToolsType[] = [
   {
     title: 'TypeScript',
-    description: '',
-    logoUrl: '',
+    description:
+      'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. It enables developers to add types to their JavaScript code, allowing for improved code quality, enhanced refactoring capabilities, and early detection of bugs.',
+    logoUrl: '/assets/tools/typescript-logo.png',
     docsUrl: '',
   },
   {
     title: 'Zod',
-    description: '',
-    logoUrl: '',
+    description:
+      'Zod is a TypeScript-first schema declaration and validation library. It provides a concise, powerful, and type-safe way to validate and transform data in your applications. Zod schemas can be used to validate API payloads, form inputs, and much more, ensuring that your data conforms to the expected structure.',
+    logoUrl: '/assets/tools/zod-logo.jpeg',
     docsUrl: '',
   },
   {
     title: 'React Query',
-    description: '',
+    description:
+      'React Query is a powerful data-fetching and state management library for React applications. It simplifies the process of fetching, caching, synchronizing, and updating server state in your React applications, allowing you to focus on the user interface and user experience. React Query provides a robust set of tools and hooks to handle server state seamlessly.',
     logoUrl: '',
     docsUrl: '',
   },
   {
     title: 'Shadcn',
-    description: '',
+    description:
+      'Shadcn is a modern library for styling React components using a CSS-in-JS approach. It focuses on simplicity and performance, providing a clean and efficient way to apply styles to your components. With Shadcn, you can write maintainable and scalable styles directly within your JavaScript or TypeScript code, leveraging the full power of CSS with the flexibility of JavaScript.',
     logoUrl: '',
     docsUrl: '',
   },
   {
-    title: 'Frammer Motion',
-    description: '',
+    title: 'Framer Motion',
+    description:
+      'Framer Motion is a popular animation library for React that allows developers to create complex animations and gestures with ease. It provides a simple API to animate elements, handle gestures, and create dynamic user interfaces. Framer Motion is designed to work seamlessly with React, enabling developers to build fluid and interactive experiences in their applications.',
     logoUrl: '',
     docsUrl: '',
   },

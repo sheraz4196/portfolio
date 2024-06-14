@@ -15,7 +15,7 @@ export type ProjectsType = {
 export type ToolsType = {
   title: string;
   description: string;
-  logoUrl: '';
+  logoUrl: string;
   docsUrl: string;
-  myBlogUrl?: '';
+  myBlogUrl?: string;
 };
