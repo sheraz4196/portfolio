@@ -7,10 +7,13 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Textarea } from '../ui/textarea';
 import { sendMail } from '@/lib/send-mail';
 import { toast } from 'sonner';
+import { Button } from '../ui/button';
 const contactFormSchema = z.object({
-  name: z.string({ message: 'Please Enter Your Name' }),
+  name: z.string().min(2, { message: 'Please Enter Your Name' }),
   email: z.string().email({ message: 'Please Enter a Valid Email Address' }),
-  message: z.string({ message: 'Please Enter Your Message Here' }),
+  message: z
+    .string()
+    .min(10, { message: 'Please make sure your message is at least 10 characters long.' }),
 });
 export default function ContactForm() {
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -36,7 +39,10 @@ export default function ContactForm() {
   };
   return (
     <Form {...form}>
-      <form className="grid grid-cols-3 items-center p-4 lg:p-6">
+      <form
+        className="grid grid-cols-3 items-center p-4 lg:p-6"
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
         <div className="col-span-3 flex flex-col gap-4 lg:col-span-3 lg:gap-6">
           <h2 className="lg:text-xl">Enter Your Good Name Here:</h2>
           <FormField
@@ -67,7 +73,7 @@ export default function ContactForm() {
           <h2 className="lg:text-xl">Enter Your Message Here:</h2>
           <FormField
             control={form.control}
-            name="email"
+            name="message"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
@@ -80,6 +86,7 @@ export default function ContactForm() {
               </FormItem>
             )}
           />
+          <Button>Send</Button>
         </div>
       </form>
     </Form>
