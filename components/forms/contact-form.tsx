@@ -5,6 +5,8 @@ import { Input } from '../ui/input';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Textarea } from '../ui/textarea';
+import { sendMail } from '@/lib/send-mail';
+import { toast } from 'sonner';
 const contactFormSchema = z.object({
   name: z.string({ message: 'Please Enter Your Name' }),
   email: z.string().email({ message: 'Please Enter a Valid Email Address' }),
@@ -19,11 +21,23 @@ export default function ContactForm() {
       message: '',
     },
   });
+  const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
+    const mailText = `Name: ${values.name}\n  Email: ${values.email}\nMessage: ${values.message}`;
+    const response = await sendMail({
+      email: values.email,
+      subject: 'New Contact Us Form',
+      text: mailText,
+    });
+    if (response?.messageId) {
+      toast.success('Application Submitted Successfully.');
+    } else {
+      toast.error('Failed To send application.');
+    }
+  };
   return (
     <Form {...form}>
       <form className="grid grid-cols-3 items-center p-4 lg:p-6">
-        <div className="col-span-3 h-72 w-72 bg-blue-400 md:col-span-1"></div>
-        <div className="col-span-3 flex flex-col gap-4 lg:col-span-2 lg:gap-6">
+        <div className="col-span-3 flex flex-col gap-4 lg:col-span-3 lg:gap-6">
           <h2 className="lg:text-xl">Enter Your Good Name Here:</h2>
           <FormField
             control={form.control}
