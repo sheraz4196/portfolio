@@ -8,10 +8,10 @@ export default function ToolkitHero() {
 
       <Boxes />
       <div className="flex max-w-4xl flex-col gap-6 text-center">
-        <h1 className={cn('relative z-20 text-xl text-white md:text-4xl')}>
+        <h1 className={cn('relative z-20 text-3xl font-bold text-white lg:text-5xl')}>
           Developer&apos;s Toolkit: Essential Tools and Libraries
         </h1>
-        <p className="relative z-20 mt-2 text-center text-neutral-300">
+        <p className="relative z-20 mt-2 text-center text-neutral-300 lg:text-xl">
           Discover the essential tools and libraries that streamline my development process. From
           powerful frameworks to handy utilities, this curated list covers everything you need to
           enhance your coding efficiency and build impressive projects.
