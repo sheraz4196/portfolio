@@ -24,6 +24,7 @@ export default function ContactForm() {
       message: '',
     },
   });
+  const isLoading = form.formState.isSubmitting;
   const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
     const mailText = `Name: ${values.name}\n  Email: ${values.email}\nMessage: ${values.message}`;
     const response = await sendMail({
@@ -86,7 +87,7 @@ export default function ContactForm() {
               </FormItem>
             )}
           />
-          <Button>Send</Button>
+          <Button disabled={isLoading}>{isLoading ? 'Sending.....' : 'Send'}</Button>
         </div>
       </form>
     </Form>
