@@ -11,3 +11,11 @@ export type ProjectsType = {
   link: string;
   thumbnail: string;
 };
+
+export type ToolsType = {
+  title: string;
+  description: string;
+  logoUrl: '';
+  docsUrl: string;
+  myBlogUrl?: '';
+};

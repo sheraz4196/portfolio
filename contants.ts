@@ -1,4 +1,4 @@
-import { ApproachesType, LinkSet, ProjectsType } from './types/types';
+import { ApproachesType, LinkSet, ProjectsType, ToolsType } from './types/types';
 export const NavigationLinks: LinkSet[] = [
   {
     text: 'Home',
@@ -87,5 +87,37 @@ export const Projects: ProjectsType[] = [
     title: 'Omnifood',
     link: 'https://sheraz4196.github.io/Omnifood/',
     thumbnail: '/assets/projects/omnifood.png',
+  },
+];
+export const Tools: ToolsType[] = [
+  {
+    title: 'TypeScript',
+    description: '',
+    logoUrl: '',
+    docsUrl: '',
+  },
+  {
+    title: 'Zod',
+    description: '',
+    logoUrl: '',
+    docsUrl: '',
+  },
+  {
+    title: 'React Query',
+    description: '',
+    logoUrl: '',
+    docsUrl: '',
+  },
+  {
+    title: 'Shadcn',
+    description: '',
+    logoUrl: '',
+    docsUrl: '',
+  },
+  {
+    title: 'Frammer Motion',
+    description: '',
+    logoUrl: '',
+    docsUrl: '',
   },
 ];

@@ -1,26 +1,26 @@
-"use client";
-import { NavigationLinks } from "@/contants";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import { Menu } from "lucide-react";
+'use client';
+import { NavigationLinks } from '@/contants';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
+import { Menu } from 'lucide-react';
 export default function Navbar() {
   const pathname = usePathname();
 
   return (
     <>
-      <nav className="hidden lg:flex items-center justify-center">
+      <nav className="hidden items-center justify-center lg:flex">
         <ol className="flex items-center justify-center gap-8">
           {NavigationLinks.map((route, index) => (
             <li
               key={index}
-              className={`text-lg px-4 py-2 rounded-md hover:bg-opacity-50 transition-all ${
-                route.link === pathname
-                  ? "bg-primary-950 border"
-                  : "bg-primary-600"
+              className={`rounded-md text-lg transition-all hover:bg-opacity-50 ${
+                route.link === pathname ? 'border bg-primary-950' : 'bg-primary-600'
               }`}
             >
-              <Link href={route.link}>{route.text}</Link>
+              <Link className="inline-block px-4 py-2" href={route.link}>
+                {route.text}
+              </Link>
             </li>
           ))}
         </ol>
@@ -36,10 +36,8 @@ export default function Navbar() {
                 {NavigationLinks.map((route, index) => (
                   <li
                     key={index}
-                    className={`text-lg px-4 py-2 rounded-md hover:bg-opacity-50 transition-all ${
-                      route.link === pathname
-                        ? "text-primary-950"
-                        : "text-primary-600"
+                    className={`rounded-md px-4 py-2 text-lg transition-all hover:bg-opacity-50 ${
+                      route.link === pathname ? 'text-primary-950' : 'text-primary-600'
                     }`}
                   >
                     <Link href={route.link}>{route.text}</Link>

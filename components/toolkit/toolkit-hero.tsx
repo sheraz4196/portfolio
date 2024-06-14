@@ -5,7 +5,6 @@ export default function ToolkitHero() {
   return (
     <div className="relative flex min-h-[90vh] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-zinc-900 p-4 lg:p-6">
       <div className="pointer-events-none absolute inset-0 z-20 h-full  bg-zinc-900 [mask-image:radial-gradient(transparent,white)]" />
-
       <Boxes />
       <div className="flex max-w-4xl flex-col gap-6 text-center">
         <h1 className={cn('relative z-20 text-3xl font-bold text-white lg:text-5xl')}>
