@@ -1,3 +1,4 @@
+import ContactForm from '@/components/forms/contact-form';
 import ToolkitHero from '@/components/toolkit/toolkit-hero';
 import ToolsSection from '@/components/toolkit/tools-section';
 
@@ -6,6 +7,7 @@ export default function ToolkitPage() {
     <main className="flex-1">
       <ToolkitHero />
       <ToolsSection />
+      <ContactForm />
     </main>
   );
 }
