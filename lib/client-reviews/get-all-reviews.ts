@@ -8,7 +8,7 @@ const reviews: Review[] = [
   {
     clientName: 'John Doe',
     review:
-      'Working with Sheraz was a pleasure. His expertise in responsive design transformed our website into a user-friendly platform.',
+      'Sheraz was a delight to work with. His knowledge responsive design really made our website user friendly.',
     picture: '/images/reviews/john_doe.jpg',
   },
   {
@@ -62,8 +62,7 @@ const reviews: Review[] = [
   },
   {
     clientName: 'James Hernandez',
-    review:
-      'Sheraz’s dedication to his craft is evident in the quality of his work. His skills in responsive design are exceptional.',
+    review: `It is clear from the exceptional level of his work that Sheraz is dedicated to his art. He has exceptional skills in responsive design.`,
     picture: '/images/reviews/james_hernandez.jpg',
   },
   {
@@ -80,7 +79,7 @@ const reviews: Review[] = [
   {
     clientName: 'Ava Lopez',
     review:
-      'Sheraz’s ability to deliver high-quality work under pressure is impressive. He is a valuable asset to any team.',
+      'Sheraz work good under pressure and deliver good sucisserful work....he would be an excellent addition to any clubhouse.',
   },
   {
     clientName: 'Lucas Walker',
@@ -90,8 +89,7 @@ const reviews: Review[] = [
   },
   {
     clientName: 'Mia Scott',
-    review:
-      'I am thoroughly impressed with Sheraz’s work. His expertise in modern web technologies is evident in every project.',
+    review: `Real talk, I'm blown away by the stuff Sheraz is doing. He's a pro in new age web tech and it shows in his every project.`,
   },
   {
     clientName: 'Henry Young',
