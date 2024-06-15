@@ -1,6 +1,7 @@
 import ApproachSection from '@/components/homepage/approach-section';
 import GithubActivity from '@/components/homepage/github-activity';
 import HeroSection from '@/components/homepage/hero-section';
+import PersonalGallery from '@/components/homepage/personal-gallery';
 import fetchContributions from '@/lib/get-contributions';
 import { GET_GITHUB_CONTRIBUTIONS } from '@/utils/rq/hooks/useGithubContibutions';
 import { getQueryClient } from '@/utils/rq/react-query-client';
@@ -15,6 +16,7 @@ export default async function Home() {
   return (
     <main className="flex-1 overflow-y-auto 2xl:px-40">
       <HeroSection />
+      <PersonalGallery />
       <ApproachSection />
     </main>
   );
