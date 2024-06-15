@@ -126,3 +126,9 @@ export const Tools: ToolsType[] = [
     docsUrl: '',
   },
 ];
+export const Aesthetics: string[] = [
+  '/assets/aesthetics/forest.jpg',
+  '/assets/aesthetics/macbook.jpg',
+  '/assets/aesthetics/snooker.jpg',
+  '/assets/aesthetics/team.jpg',
+];

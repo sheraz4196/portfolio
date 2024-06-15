@@ -12,7 +12,7 @@ export const DirectionAwareHover = ({
   className,
 }: {
   imageUrl: string;
-  children: React.ReactNode | string;
+  children?: React.ReactNode | string;
   childrenClassName?: string;
   imageClassName?: string;
   className?: string;
@@ -58,7 +58,7 @@ export const DirectionAwareHover = ({
       onMouseEnter={handleMouseEnter}
       ref={ref}
       className={cn(
-        'group/card relative h-60 w-60 overflow-hidden rounded-lg bg-transparent md:h-96 md:w-96',
+        'group/card relative h-60 w-60 rotate-6 overflow-hidden rounded-2xl bg-transparent md:h-96 md:w-96',
         className
       )}
     >
