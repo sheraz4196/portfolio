@@ -33,6 +33,16 @@ export const SocialMediaLinks: SocialMediaLinksType[] = [
     profileUrl: 'https://x.com/ManzoorShe57212',
     icon: '/assets/socialmedia/twitter.svg',
   },
+  {
+    platform: 'Facebook',
+    profileUrl: 'https://www.facebook.com/paksherazsafi/',
+    icon: '/assets/socialmedia/facebook.svg',
+  },
+  {
+    platform: 'Github',
+    profileUrl: 'https://github.com/sheraz4196',
+    icon: '/assets/socialmedia/github.svg',
+  },
 ];
 export const ApproachesContent: ApproachesType[] = [
   {

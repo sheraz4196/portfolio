@@ -2,6 +2,7 @@
 import TypewriterComponent from 'typewriter-effect';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import SocialMedia from '../general/social-media';
 export default function HeroSection() {
   return (
     <section className="grid min-h-[90vh] p-4 lg:grid-cols-2 lg:p-6">
@@ -31,6 +32,7 @@ export default function HeroSection() {
               <Link href={'/about'}>Learn More About Me</Link>
             </Button>
           </div>
+          <SocialMedia />
         </div>
       </div>
       <div className="mt-8 flex items-center justify-center lg:mt-0 lg:justify-self-end">
