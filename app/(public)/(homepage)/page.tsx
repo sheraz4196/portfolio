@@ -1,3 +1,4 @@
+import Quote from '@/components/general/quotes';
 import ApproachSection from '@/components/homepage/approach-section';
 import GithubActivity from '@/components/homepage/github-activity';
 import HeroSection from '@/components/homepage/hero-section';
@@ -28,6 +29,12 @@ export default async function Home() {
       <ReactQueryHydrate hydrate={dehydrate(queryClient)}>
         <Testimonials />
       </ReactQueryHydrate>
+      <Quote
+        author="Steve Jobs"
+        quote="The only way to do great work is to love what you do."
+        imgUrl="/assets/authors/steve-jobs.jpg"
+        className="my-4 lg:my-6"
+      />
       <ApproachSection />
     </main>
   );
