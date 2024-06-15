@@ -1,4 +1,10 @@
-import { ApproachesType, LinkSet, ProjectsType, ToolsType } from './types/types';
+import {
+  ApproachesType,
+  LinkSet,
+  ProjectsType,
+  SocialMediaLinksType,
+  ToolsType,
+} from './types/types';
 export const NavigationLinks: LinkSet[] = [
   {
     text: 'Home',
@@ -19,6 +25,13 @@ export const NavigationLinks: LinkSet[] = [
   {
     text: 'Contact Me',
     link: '/contact',
+  },
+];
+export const SocialMediaLinks: SocialMediaLinksType[] = [
+  {
+    platform: 'X',
+    profileUrl: 'https://x.com/ManzoorShe57212',
+    icon: '/assets/socialmedia/twitter.svg',
   },
 ];
 export const ApproachesContent: ApproachesType[] = [

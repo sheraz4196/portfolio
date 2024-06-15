@@ -1,6 +1,13 @@
+import { ReactNode } from 'react';
+
 export type LinkSet = {
   text: string;
   link: string;
+};
+export type SocialMediaLinksType = {
+  platform: string;
+  profileUrl: string;
+  icon: string;
 };
 export type ApproachesType = {
   title: string;
