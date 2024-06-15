@@ -9,6 +9,14 @@ export default function Testimonials() {
   const { data: reviews, isLoading, error } = useReviews();
   return (
     <section className="p-4 lg:p-6">
+      <h3 className="mb-12 text-3xl font-bold lg:text-6xl">
+        Words From Our <span className="text-primary-600">Valued Clients</span>
+      </h3>
+      <p className="mb-20 max-w-5xl lg:text-xl">
+        Explore the experiences and stories from our satisfied clients. Each testimonial showcases
+        the dedication, expertise, and passion that drive our projects to success. Discover how
+        we’ve made a difference through their eyes.
+      </p>
       <BentoGrid className="hidden lg:grid">
         {reviews?.map((review, index) => (
           <BentoGridItem
