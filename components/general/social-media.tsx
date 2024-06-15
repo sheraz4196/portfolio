@@ -2,10 +2,10 @@ import { SocialMediaLinks } from '@/contants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-export default function SocialMedia() {
+import { cn } from '@/lib/utils';
+export default function SocialMedia({ className }: { className?: string }) {
   return (
-    <div className="flex items-center gap-4">
+    <div className={cn('flex items-center gap-4', className)}>
       {SocialMediaLinks.map((link, index) => (
         <motion.div
           whileHover={{ scale: 1.1 }}

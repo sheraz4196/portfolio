@@ -24,7 +24,7 @@ export default function HeroSection() {
               }}
             />
           </h1>
-          <div className="flex items-center gap-4">
+          <div className="mx-auto flex items-center gap-4 lg:mx-0">
             <Button className="mt-4 max-w-max lg:mt-6" asChild>
               <Link href={'/hire-me'}>Hire Me</Link>
             </Button>
@@ -32,7 +32,7 @@ export default function HeroSection() {
               <Link href={'/about'}>Learn More About Me</Link>
             </Button>
           </div>
-          <SocialMedia />
+          <SocialMedia className="mx-auto lg:mx-0" />
         </div>
       </div>
       <div className="mt-8 flex items-center justify-center lg:mt-0 lg:justify-self-end">
