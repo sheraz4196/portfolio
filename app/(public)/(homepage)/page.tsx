@@ -2,10 +2,14 @@ import ApproachSection from '@/components/homepage/approach-section';
 import GithubActivity from '@/components/homepage/github-activity';
 import HeroSection from '@/components/homepage/hero-section';
 import PersonalGallery from '@/components/homepage/personal-gallery';
+import Testimonials from '@/components/homepage/testimonials';
+import { getAllReviews } from '@/lib/client-reviews/get-all-reviews';
 import fetchContributions from '@/lib/get-contributions';
 import { GET_GITHUB_CONTRIBUTIONS } from '@/utils/rq/hooks/useGithubContibutions';
+import { GET_USER_REVIEWS } from '@/utils/rq/hooks/useReviews';
 import { getQueryClient } from '@/utils/rq/react-query-client';
 import { ReactQueryHydrate } from '@/utils/rq/react-query-hydrate';
+import { dehydrate } from '@tanstack/react-query';
 
 export default async function Home() {
   const queryClient = getQueryClient();
@@ -13,10 +17,17 @@ export default async function Home() {
     queryKey: [GET_GITHUB_CONTRIBUTIONS],
     queryFn: () => fetchContributions('sheraz4196'),
   });
+  await queryClient.prefetchQuery({
+    queryKey: [GET_USER_REVIEWS],
+    queryFn: () => getAllReviews(),
+  });
   return (
     <main className="flex-1 overflow-y-auto 2xl:px-40">
       <HeroSection />
       <PersonalGallery />
+      <ReactQueryHydrate hydrate={dehydrate(queryClient)}>
+        <Testimonials />
+      </ReactQueryHydrate>
       <ApproachSection />
     </main>
   );

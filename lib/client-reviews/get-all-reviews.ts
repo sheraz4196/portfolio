@@ -121,6 +121,6 @@ export async function getAllReviews(): Promise<Review[]> {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(reviews);
-    }, 4000);
+    }, 0);
   });
 }

@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-export const GET_GITHUB_CONTRIBUTIONS = 'get-github-contributions';
 import fetchContributions from '@/lib/get-contributions';
+export const GET_GITHUB_CONTRIBUTIONS = 'get-github-contributions';
 
 export function useGithubContributions() {
   return useQuery({
