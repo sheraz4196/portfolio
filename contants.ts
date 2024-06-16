@@ -161,3 +161,16 @@ export const Aesthetics: string[] = [
   '/assets/aesthetics/snooker.jpg',
   '/assets/aesthetics/team.jpg',
 ];
+export const SkillsSet = [
+  'HTML5',
+  'CSS3',
+  'Tailwind CSS',
+  'JavaScript',
+  'Typescript',
+  'Zod',
+  'SaaS',
+  'React.js',
+  'Next.js',
+  'Zustand',
+  'Git',
+];
