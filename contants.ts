@@ -43,6 +43,12 @@ export const SocialMediaLinks: SocialMediaLinksType[] = [
     profileUrl: 'https://github.com/sheraz4196',
     icon: '/assets/socialmedia/github.svg',
   },
+  {
+    platform: 'Email',
+    profileUrl:
+      'mailto:sheraz.dev121@gmail.com?subject=Hello%dSheraz!=Hi%20there,%0D%0A%0D%0AI%20wanted%20to%20reach%20out%20to%20you.',
+    icon: '/assets/socialmedia/email.svg',
+  },
 ];
 export const ApproachesContent: ApproachesType[] = [
   {
