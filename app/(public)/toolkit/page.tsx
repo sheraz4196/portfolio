@@ -7,7 +7,6 @@ export default function ToolkitPage() {
     <main className="flex-1">
       <ToolkitHero />
       <ToolsSection />
-      <ContactForm />
     </main>
   );
 }
