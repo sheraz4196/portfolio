@@ -3,6 +3,7 @@ import ApproachSection from '@/components/homepage/approach-section';
 import GithubActivity from '@/components/homepage/github-activity';
 import HeroSection from '@/components/homepage/hero-section';
 import PersonalGallery from '@/components/homepage/personal-gallery';
+import { PostReview } from '@/components/homepage/post-reveiw';
 import Testimonials from '@/components/homepage/testimonials';
 import { getAllReviews } from '@/lib/client-reviews/get-all-reviews';
 import fetchContributions from '@/lib/get-contributions';

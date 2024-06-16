@@ -4,6 +4,7 @@ import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { BackgroundGradient } from '../ui/glowing-background';
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
+import { PostReview } from './post-reveiw';
 
 export default function Testimonials() {
   const { data: reviews, isLoading, error } = useReviews();
@@ -26,8 +27,9 @@ export default function Testimonials() {
             description={review.review}
           />
         ))}
+        <PostReview />
       </BentoGrid>
-      <Carousel className="lg:hidden">
+      <Carousel className="flex flex-col gap-20 lg:hidden">
         <CarouselContent>
           {reviews?.map((review, index) => (
             <CarouselItem key={index} className="sm:basis-1/2">
@@ -49,6 +51,7 @@ export default function Testimonials() {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <PostReview />
       </Carousel>
     </section>
   );
