@@ -27,7 +27,6 @@ export default function Testimonials() {
             description={review.review}
           />
         ))}
-        <PostReview />
       </BentoGrid>
       <Carousel className="flex flex-col gap-20 lg:hidden">
         <CarouselContent>
@@ -51,7 +50,6 @@ export default function Testimonials() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <PostReview />
       </Carousel>
     </section>
   );
