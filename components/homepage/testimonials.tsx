@@ -2,9 +2,7 @@
 import { useReviews } from '@/utils/rq/hooks/useReviews';
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { BackgroundGradient } from '../ui/glowing-background';
-import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
-import { PostReview } from './post-reveiw';
 
 export default function Testimonials() {
   const { data: reviews, isLoading, error } = useReviews();
